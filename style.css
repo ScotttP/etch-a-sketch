@@ -1,12 +1,19 @@
 #gridContainer {
     display: grid;
+    grid-template-columns: repeat(var(--quantity), 1fr);
+    grid-template-rows: repeat(var(--quantity), 1fr);
+    height: auto;
+    width: auto;
     border: solid;
+    background-color:white; 
     border-color: black;
 }
 .divCreated {
-    height: auto;
-    width: auto;
-    border: 1px solid black;
+    max-height: 35px;
+    min-height: 35px;
+    min-width: 35px;
+    max-width: 35px;
+    border: 1px solid grey;
     background-color: white;
     border-radius: 4px;
 }

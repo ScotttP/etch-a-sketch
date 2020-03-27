@@ -1,8 +1,12 @@
 const gridContainer = document.querySelector('#gridContainer');
-function createGrid(qty = 16){
-    for (i=0; i<qty ** 2 ; i++){
-        let divContainer = document.createElement('div');
-        divContainer.classList.add('divCreated');
-        gridContainer.appendChild(divContainer);
-    }
+
+function createDiv(quantity){
+    for(i= 0; i < quantity** 2;i++){
+        const divCreated = document.createElement('div');
+        divCreated.classList.add('divCreated');
+        divCreated.id = i;
+        gridContainer.appendChild(divCreated);
 }
+}
+
+
