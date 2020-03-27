@@ -1,12 +1,6 @@
-#gridContainer {
-    display: grid;
-    grid-template-columns: repeat(var(--quantity), 1fr);
-    grid-template-rows: repeat(var(--quantity), 1fr);
-    height: auto;
-    width: auto;
-    border: solid;
-    background-color:white; 
-    border-color: black;
+h1 {
+    display: flex;
+    justify-content: center;
 }
 .divCreated {
     max-height: 35px;
@@ -15,5 +9,45 @@
     max-width: 35px;
     border: 1px solid grey;
     background-color: white;
-    border-radius: 4px;
+    
+}
+#gridContainer {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(var(--quantity), 1fr);
+    grid-template-rows: repeat(var(--quantity), 1fr);
+    min-height: 200px;
+    min-width: 200px;
+    height: auto;
+    width: auto;
+    max-height: 85vh;
+    max-width: 85vh;
+    border: solid;
+    background-color:white; 
+    border-color: black;
+}
+#grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    width: auto;
+    height: auto;
+   
+    
+}
+#clear {
+    padding: 30px 15px;
+    margin: 5px;
+    
+}
+#create {
+    padding: 20px 15px;
+    margin: 5px;
 }
