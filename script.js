@@ -10,10 +10,12 @@ function defaultGrid (quantity=16) { //default grid to 16x16 function
     }
     document.documentElement.style.setProperty('--quantity',quantity);
 }
+defaultGrid();
 
-function randomColor () { // fills in random color once hovered over divs
+
+function randomColor (cName) { // fills in random color once hovered over divs
     hoverColor = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementById('gridContainer').style.background = hoverColor;
+    document.getElementById(cName).style.background = hoverColor;
 }
 
 function clearGrid () { // reset the grid to white 
@@ -27,4 +29,3 @@ function customGrid () {// prompts user to enter grid quantity between 2-64
 
 
 
-defaultGrid();
