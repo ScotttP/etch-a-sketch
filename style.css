@@ -37,17 +37,17 @@ h1 {
     justify-content: center;
     text-align: center;
     padding-top: 20px;
-    width: auto;
-    height: auto;
+    min-width: 25px;
+    min-height: 15px;
    
     
 }
 #clear {
-    padding: 30px 15px;
+    padding: 15px;
     margin: 5px;
     
 }
 #create {
-    padding: 20px 15px;
+    padding: 15px;
     margin: 5px;
 }
