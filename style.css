@@ -11,6 +11,8 @@ h1 {
     background-color: white;
     
 }
+
+
 #gridContainer {
     display: grid;
     justify-self: center;
@@ -21,7 +23,7 @@ h1 {
     height: auto;
     width: auto;
     max-height: 85vh;
-    max-width: 85vh;
+    max-width: 85vw;
     border: solid;
     background-color:white; 
     border-color: black;
@@ -39,6 +41,7 @@ h1 {
     padding-top: 20px;
     min-width: 25px;
     min-height: 15px;
+    
    
     
 }
@@ -46,8 +49,9 @@ h1 {
     padding: 15px;
     margin: 5px;
     
+    
 }
-#create {
+#custom {
     padding: 15px;
     margin: 5px;
 }

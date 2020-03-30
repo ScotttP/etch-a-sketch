@@ -1,5 +1,10 @@
 const gridContainer = document.querySelector('#gridContainer');
-const divCreate = document.getElementsByClassName('divCreated');
+const divCreated = document.getElementsByClassName('divCreated');
+const divColor = document.querySelector('divCreated');
+const header = document.getElementsByClassName('header');
+const custom = document.querySelector('custom');
+const clear = document.querySelector('clear');
+
 
 function defaultGrid (quantity=16) { //default grid to 16x16 function
     for(i= 0; i < quantity ** 2; i++){
@@ -12,17 +17,25 @@ function defaultGrid (quantity=16) { //default grid to 16x16 function
 }
 defaultGrid();
 
+divColor.addEventListener("mouseover",defaultColor);
 
-function randomColor (cName) { // fills in random color once hovered over divs
-    hoverColor = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementById(cName).style.background = hoverColor;
+function defaultColor () {
+    divColor.style.backgroundColor="red";
 }
+
+
+function randomColor () { // fills in random color once hovered over divs
+
+}
+
 
 function clearGrid () { // reset the grid to white 
 
 }
 
 function customGrid () {// prompts user to enter grid quantity between 2-64
+
+
 
 }
 
