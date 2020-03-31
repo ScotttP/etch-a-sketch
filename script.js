@@ -1,8 +1,16 @@
 const gridContainer = document.querySelector('#gridContainer');
 const divCreated = document.getElementsByClassName('divCreated');
-const header = document.getElementsByClassName('header');
-const custom = document.querySelector('custom');
-const clear = document.querySelector('clear');
+
+const customButton = document.querySelector('#custom');
+customButton.addEventListener ('click', function() {
+    customGrid();
+});
+
+const clearButton = document.querySelector('#clear')
+clearButton.addEventListener('click',function(){
+    clearGrid ();
+});
+
 
 function defaultGrid (quantity=16) { //default grid to 16x16 function
     for(i= 0; i < quantity ** 2; i++){
@@ -15,28 +23,38 @@ function defaultGrid (quantity=16) { //default grid to 16x16 function
 }
 defaultGrid();
 
-document.querySelectorAll('.divCreated').forEach(divColor => {
- divColor.addEventListener('mouseover', defaultColor )
-}); 
-
-function defaultColor (divColor) {
-    divColor.style.backgroundColor="red";
-}
-
-function randomColor () { // fills in random color once hovered over divs removes default color
-
-}
-
-
-function clearGrid () { // reset the grid to white 
-
-}
-
 function customGrid () {// prompts user to enter grid quantity between 2-64
 
-
-
 }
+
+
+function defaultColor () {
+    const divColor = document.querySelectorAll('.divCreated');
+        divColor.forEach(divCreated => {
+        divCreated.addEventListener('mouseover', () =>{
+        divCreated.style.backgroundColor = "black";
+        });
+    }); 
+}
+defaultColor();
+
+function randomColor () { // fills in random color once hovered over divs removes default color
+    Math.floor(Math.random()*16777215).toString(16);
+   
+}
+
+
+function clearGrid () { // clearButton variable activates this function when button is clicked
+    const clearDivs = document.querySelectorAll('.divCreated');
+    clearDivs.forEach(function (divCreated) {
+        divCreated.style.backgroundColor = "white";
+    });
+   
+}
+
+
+
+
 
 
 
