@@ -3,16 +3,16 @@ const divCreated = document.getElementsByClassName('divCreated');
 
 const customButton = document.querySelector('#custom');
 customButton.addEventListener ('click', function() {
-    customGrid();
+    customGrid(); //repeat function could be consolidated into 1. work on this.
+    defaultColor();
 });
-
 const clearButton = document.querySelector('#clear')
 clearButton.addEventListener('click',function(){
     clearGrid ();
 });
 
 
-function defaultGrid (quantity=16) { //default grid to 16x16 function
+function defaultGrid (quantity) { //default grid to 16x16 function
     for(i= 0; i < quantity ** 2; i++){
         const newDiv = document.createElement('div');
             newDiv.classList.add('divCreated');
@@ -21,7 +21,7 @@ function defaultGrid (quantity=16) { //default grid to 16x16 function
     }
     document.documentElement.style.setProperty('--quantity',quantity);
 };
-defaultGrid();
+defaultGrid(16);
 
 function defaultColor () {
     const divColor = document.querySelectorAll('.divCreated');
@@ -43,6 +43,7 @@ function customGrid () {// prompts user to enter grid quantity between 2-100
             gridContainer.removeChild(div);
         });
         defaultGrid(quantity);
+        defaultColor();
     };
 };
 
